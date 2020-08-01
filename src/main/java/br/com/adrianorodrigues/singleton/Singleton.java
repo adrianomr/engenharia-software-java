@@ -1,4 +1,4 @@
-package br.com.adriano.singleton;
+package br.com.adrianorodrigues.singleton;
 
 public class Singleton {
 

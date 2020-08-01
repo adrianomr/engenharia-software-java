@@ -1,4 +1,4 @@
-package br.com.br.com.adrianorodrigues.executor;
+package br.com.adrianorodrigues.executor;
 
 import br.com.adrianorodrigues.interfaces.Executable;
 
