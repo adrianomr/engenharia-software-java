@@ -2,7 +2,7 @@ package br.com.adrianorodrigues.singleton;
 
 import br.com.adrianorodrigues.interfaces.Executable;
 
-public class SingletonUseCase implements Executable {
+public class SingletonExecutor implements Executable {
     @Override
     public String getTitle() {
         return "Singleton";
