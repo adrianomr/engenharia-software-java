@@ -2,19 +2,25 @@ package br.com.adrianorodrigues.algoritms;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
-public class BinaryTreeHeight {
+public class TreeLevelOrderTransversal {
 
-    public static int height(Node root) {
-        return root == null ? 0 : getMaxHeight(root) - 1;
-    }
-
-    private static int getMaxHeight(Node root) {
-        if (root == null) {
-            return 0;
+    public static void levelOrder(Node root) {
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        String result = "";
+        while (!queue.isEmpty()) {
+            Node node = queue.poll();
+            result += result.equalsIgnoreCase("") ? node.data : " " + node.data;
+            if (node.left != null)
+                queue.add(node.left);
+            if (node.right != null)
+                queue.add(node.right);
         }
-        return Math.max(getMaxHeight(root.left), getMaxHeight(root.right)) + 1;
+        System.out.println(result);
     }
 
     public static Node insert(Node root, int data) {
@@ -34,7 +40,7 @@ public class BinaryTreeHeight {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        File file = new File(System.getProperty("user.dir") + "/src/main/resources/BinaryTreeHeightData.txt");
+        File file = new File(System.getProperty("user.dir") + "/src/main/resources/TreeLevelOrderTransversal.txt");
         Scanner scan = new Scanner(file);
         int t = scan.nextInt();
         Node root = null;
@@ -43,8 +49,7 @@ public class BinaryTreeHeight {
             root = insert(root, data);
         }
         scan.close();
-        int height = height(root);
-        System.out.println(height);
+        levelOrder(root);
     }
-}
 
+}
