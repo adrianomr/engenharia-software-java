@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class TreeLevelOrderTransversal {
 
@@ -20,7 +21,7 @@ public class TreeLevelOrderTransversal {
             if (node.right != null)
                 queue.add(node.right);
         }
-        System.out.println(result);
+        Logger.getGlobal().info(result);
     }
 
     public static Node insert(Node root, int data) {

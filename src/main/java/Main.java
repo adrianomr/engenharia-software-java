@@ -4,9 +4,11 @@ import br.com.adrianorodrigues.singleton.SingletonExecutor;
 import br.com.adrianorodrigues.stringbuilder.StringBuilderExecutor;
 import br.com.adrianorodrigues.stringpool.StringPoolExecutor;
 
+import java.util.logging.Logger;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Design Patterns");
+        Logger.getGlobal().info("Design Patterns");
         Executor.execute(new SingletonExecutor());
         Executor.execute(new DijkstraShortestPathExecutor());
         Executor.execute(new StringPoolExecutor());

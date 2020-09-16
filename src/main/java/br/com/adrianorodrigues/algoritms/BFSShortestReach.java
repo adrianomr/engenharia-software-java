@@ -3,6 +3,7 @@ package br.com.adrianorodrigues.algoritms;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
+import java.util.logging.Logger;
 
 public class BFSShortestReach {
 
@@ -37,7 +38,7 @@ public class BFSShortestReach {
                     System.out.print(" ");
                 }
             }
-            System.out.println();
+            Logger.getGlobal().info("\n");
         }
 
         scanner.close();

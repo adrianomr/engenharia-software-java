@@ -3,6 +3,8 @@ package br.com.adrianorodrigues.stringbuilder;
 import br.com.adrianorodrigues.interfaces.Executable;
 import br.com.adrianorodrigues.util.timer.Timer;
 
+import java.util.logging.Logger;
+
 public class StringBuilderExecutor implements Executable {
     // Artigo para leitura: https://www.devmedia.com.br/diferencas-entre-string-stringbuilder-e-stringbuffer-em-java/29865
     @Override
@@ -17,11 +19,11 @@ public class StringBuilderExecutor implements Executable {
         timer.startTimer();
         stringBuilderLoop(size);
         elapsedTimer = timer.finishTimer();
-        System.out.println("Looping using string builder: " + elapsedTimer);
+        Logger.getGlobal().info("Looping using string builder: " + elapsedTimer);
         timer.startTimer();
         concatLoop(size);
         elapsedTimer = timer.finishTimer();
-        System.out.println("Looping using concat: " + elapsedTimer);
+        Logger.getGlobal().info("Looping using concat: " + elapsedTimer);
     }
 
     public String stringBuilderLoop(int size) {

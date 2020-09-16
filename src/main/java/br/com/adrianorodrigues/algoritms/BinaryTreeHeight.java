@@ -3,6 +3,7 @@ package br.com.adrianorodrigues.algoritms;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class BinaryTreeHeight {
 
@@ -44,7 +45,7 @@ public class BinaryTreeHeight {
         }
         scan.close();
         int height = height(root);
-        System.out.println(height);
+        Logger.getGlobal().info("" + height);
     }
 }
 

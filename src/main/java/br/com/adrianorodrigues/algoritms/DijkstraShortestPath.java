@@ -7,6 +7,8 @@ package br.com.adrianorodrigues.algoritms;
     https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/
     */
 
+import java.util.logging.Logger;
+
 public class DijkstraShortestPath {
 
 
@@ -29,9 +31,9 @@ public class DijkstraShortestPath {
 
     // A utility function to print the constructed distance array
     void printSolution(int[] dist) {
-        System.out.println("Vertex \t\t Distance from Source");
+        Logger.getGlobal().info("Vertex \t\t Distance from Source");
         for (int i = 0; i < V; i++)
-            System.out.println(i + " \t\t " + dist[i]);
+            Logger.getGlobal().info(i + " \t\t " + dist[i]);
     }
 
     // Function that implements Dijkstra's single source shortest path
