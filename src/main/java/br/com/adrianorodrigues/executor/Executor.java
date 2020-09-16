@@ -1,18 +1,18 @@
 package br.com.adrianorodrigues.executor;
 
 import br.com.adrianorodrigues.interfaces.Executable;
-
-import java.util.Date;
+import br.com.adrianorodrigues.util.timer.Timer;
 
 public class Executor {
     public static void execute(Executable executable) {
+        Timer timer = new Timer();
         System.out.println("---------------------------------------------------------");
         System.out.println(executable.getTitle());
-        Date beginDate = new Date();
+        timer.startTimer();
         executable.execute();
-        Date endDate = new Date();
+        long elapsedTime = timer.finishTimer();
         System.out.println("---------------------------------------------------------");
-        System.out.println("Time Elapsed: " + (endDate.getTime() - beginDate.getTime()) + " ms");
+        System.out.println("Time Elapsed: " + elapsedTime + " ms");
         System.out.println("---------------------------------------------------------");
     }
 }
