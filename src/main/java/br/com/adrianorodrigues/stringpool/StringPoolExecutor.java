@@ -22,5 +22,9 @@ public class StringPoolExecutor implements Executable {
         Logger.getGlobal().info("Pointer to 'Adriano': " + System.identityHashCode(adriano));
         Logger.getGlobal().info("Same pointer to 'Adriano': " + System.identityHashCode(adrianoWithSameMemoryAddress));
         Logger.getGlobal().info("Different pointer to 'Adriano': " + System.identityHashCode(adrianoWithDiferenteMemoryAddres));
+        Boolean sameAddresss = adriano == adrianoWithSameMemoryAddress;
+        Boolean differentAddresss = adriano == adrianoWithDiferenteMemoryAddres;
+        Logger.getGlobal().info("Teste == with same address: " + sameAddresss.toString());
+        Logger.getGlobal().info("Teste == with different address: " + differentAddresss.toString());
     }
 }
