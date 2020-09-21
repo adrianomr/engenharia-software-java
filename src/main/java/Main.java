@@ -1,4 +1,5 @@
 import br.com.adrianorodrigues.algoritms.DijkstraShortestPathExecutor;
+import br.com.adrianorodrigues.collections.ListVsSet;
 import br.com.adrianorodrigues.executor.Executor;
 import br.com.adrianorodrigues.singleton.SingletonExecutor;
 import br.com.adrianorodrigues.stringbuilder.StringBuilderExecutor;
@@ -13,5 +14,6 @@ public class Main {
         Executor.execute(new DijkstraShortestPathExecutor());
         Executor.execute(new StringPoolExecutor());
         Executor.execute(new StringBuilderExecutor());
+        Executor.execute(new ListVsSet());
     }
 }
