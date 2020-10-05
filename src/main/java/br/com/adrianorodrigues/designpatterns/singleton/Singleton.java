@@ -1,4 +1,4 @@
-package br.com.adrianorodrigues.singleton;
+package br.com.adrianorodrigues.designpatterns.singleton;
 
 public class Singleton {
 
@@ -6,7 +6,7 @@ public class Singleton {
         Use case: bd connection
      */
 
-    private static Singleton singleton = new Singleton();
+    private static final Singleton singleton = new Singleton();
 
     private String name;
 
