@@ -1,4 +1,4 @@
-package br.com.adrianorodrigues.designpatterns.abstractfactory;
+package br.com.adrianorodrigues.designpatterns.creational.abstractfactory;
 
 public class White implements Color {
     @Override

@@ -1,4 +1,4 @@
-package br.com.adrianorodrigues.designpatterns.factory;
+package br.com.adrianorodrigues.designpatterns.creational.factory;
 
 public class PolygonFactory {
     public Polygon getPolygon(int numberOfSides) {

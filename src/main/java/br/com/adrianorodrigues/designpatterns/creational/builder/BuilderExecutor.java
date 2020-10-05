@@ -1,4 +1,4 @@
-package br.com.adrianorodrigues.designpatterns.builder;
+package br.com.adrianorodrigues.designpatterns.creational.builder;
 
 import br.com.adrianorodrigues.interfaces.Executable;
 

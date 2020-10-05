@@ -1,4 +1,4 @@
-package br.com.adrianorodrigues.designpatterns.singleton;
+package br.com.adrianorodrigues.designpatterns.creational.singleton;
 
 import br.com.adrianorodrigues.interfaces.Executable;
 

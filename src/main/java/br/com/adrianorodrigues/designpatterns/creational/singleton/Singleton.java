@@ -1,4 +1,4 @@
-package br.com.adrianorodrigues.designpatterns.singleton;
+package br.com.adrianorodrigues.designpatterns.creational.singleton;
 
 public class Singleton {
 

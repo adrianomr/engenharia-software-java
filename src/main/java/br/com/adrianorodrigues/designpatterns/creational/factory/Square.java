@@ -1,4 +1,4 @@
-package br.com.adrianorodrigues.designpatterns.factory;
+package br.com.adrianorodrigues.designpatterns.creational.factory;
 
 public class Square implements Polygon {
     @Override
