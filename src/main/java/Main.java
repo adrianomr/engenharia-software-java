@@ -1,5 +1,6 @@
 import br.com.adrianorodrigues.algoritms.DijkstraShortestPathExecutor;
 import br.com.adrianorodrigues.collections.ListVsSet;
+import br.com.adrianorodrigues.designpatterns.abstractfactory.AbstractFactoryExecutor;
 import br.com.adrianorodrigues.designpatterns.factory.FactoryExecutor;
 import br.com.adrianorodrigues.designpatterns.singleton.SingletonExecutor;
 import br.com.adrianorodrigues.executor.Executor;
@@ -13,6 +14,7 @@ public class Main {
         Logger.getGlobal().info("Design Patterns");
         Executor.execute(new SingletonExecutor());
         Executor.execute(new FactoryExecutor());
+        Executor.execute(new AbstractFactoryExecutor());
         Logger.getGlobal().info("Algorithms");
         Executor.execute(new DijkstraShortestPathExecutor());
         Logger.getGlobal().info("String");
