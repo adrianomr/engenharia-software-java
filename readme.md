@@ -1,6 +1,7 @@
 # Software Engineering Project
 
 ## Design Patterns
+* https://www.baeldung.com/design-patterns-series
 
 ### Creational Design Patterns
 * https://www.baeldung.com/creational-design-patterns
