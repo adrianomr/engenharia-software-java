@@ -5,6 +5,7 @@ import br.com.adrianorodrigues.designpatterns.creational.builder.BuilderExecutor
 import br.com.adrianorodrigues.designpatterns.creational.factory.FactoryExecutor;
 import br.com.adrianorodrigues.designpatterns.creational.singleton.SingletonExecutor;
 import br.com.adrianorodrigues.designpatterns.structural.adapter.AdapterExecutor;
+import br.com.adrianorodrigues.designpatterns.structural.bridge.BridgeExecutor;
 import br.com.adrianorodrigues.designpatterns.structural.decorator.DecoratorExecutor;
 import br.com.adrianorodrigues.designpatterns.structural.proxy.ProxyExecutor;
 import br.com.adrianorodrigues.executor.Executor;
@@ -25,6 +26,7 @@ public class Main {
         Executor.execute(new ProxyExecutor());
         Executor.execute(new DecoratorExecutor());
         Executor.execute(new AdapterExecutor());
+        Executor.execute(new BridgeExecutor());
         Logger.getGlobal().info("Algorithms");
         Executor.execute(new DijkstraShortestPathExecutor());
         Logger.getGlobal().info("String");
