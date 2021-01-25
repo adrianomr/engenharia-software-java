@@ -1,4 +1,4 @@
-package br.com.adrianorodrigues.algoritms;
+package br.com.adrianorodrigues.algoritms.hackerrank;
 
 import jdk.nashorn.internal.runtime.logging.Logger;
 
