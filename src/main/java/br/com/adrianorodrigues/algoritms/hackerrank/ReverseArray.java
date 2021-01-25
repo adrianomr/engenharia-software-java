@@ -1,11 +1,8 @@
 package br.com.adrianorodrigues.algoritms.hackerrank;
 
-import jdk.nashorn.internal.runtime.logging.Logger;
 
 import java.io.FileNotFoundException;
-import java.util.HashMap;
 
-@Logger
 public class ReverseArray {
 
 

@@ -19,18 +19,34 @@ public class QuickSort {
         while(partitionIsNotComplete(higherNumberIndex, lowerNumberIndex)){
             higherNumberIndex = findFirstHigherNumber(list, pivo, higherNumberIndex);
             lowerNumberIndex = findFirstLowerNumber(list, pivo, lowerNumberIndex);
-            if(higherNumberIndex <= lowerNumberIndex){
-                //swap
-                Integer aux = list.get(higherNumberIndex);
-                list.set(higherNumberIndex, list.get(lowerNumberIndex));
-                list.set(lowerNumberIndex, aux);
-                higherNumberIndex = higherNumberIndex + 1;
-                lowerNumberIndex = lowerNumberIndex - 1;
+            if(mustSwap(higherNumberIndex, lowerNumberIndex)){
+                list = swap(list, higherNumberIndex, lowerNumberIndex);
+                higherNumberIndex = getNextHigherNumber(higherNumberIndex);
+                lowerNumberIndex = getNextLowerNumber(lowerNumberIndex);
             }
         }
         sortFirstPartitionRecursevily(list, begin, lowerNumberIndex);
         sortSecondPartitionRecursively(list, end, higherNumberIndex);
         return list;
+    }
+
+    private static int getNextHigherNumber(int higherNumberIndex) {
+        return higherNumberIndex + 1;
+    }
+
+    private static Integer getNextLowerNumber(int lowerNumberIndex) {
+        return lowerNumberIndex - 1;
+    }
+
+    private static List<Integer> swap(List<Integer> list, int higherNumberIndex, int lowerNumberIndex) {
+        Integer aux = list.get(higherNumberIndex);
+        list.set(higherNumberIndex, list.get(lowerNumberIndex));
+        list.set(lowerNumberIndex, aux);
+        return list;
+    }
+
+    private static boolean mustSwap(int higherNumberIndex, int lowerNumberIndex) {
+        return higherNumberIndex <= lowerNumberIndex;
     }
 
     private static void sortSecondPartitionRecursively(List<Integer> list, int end, int i) {
@@ -43,8 +59,8 @@ public class QuickSort {
             sort(list, begin, j);
     }
 
-    private static boolean partitionIsNotComplete(int i, int j) {
-        return i < j;
+    private static boolean partitionIsNotComplete(int higherNumberIndex, int lowerNumberIndex) {
+        return higherNumberIndex < lowerNumberIndex;
     }
 
     private static int findFirstLowerNumber(List<Integer> list, Integer pivo, int j) {
@@ -64,7 +80,7 @@ public class QuickSort {
     }
 
     public static void main(String[] args) throws IOException {
-        List<Integer> list = ArrayUtils.generateArrayFromSize(6);
+        List<Integer> list = ArrayUtils.generateArrayFromSize(10);
         System.out.println("------------------Inicio-------------------");
         ArrayUtils.printArray(list);
         System.out.println("-------------------------------------------");

@@ -1,13 +1,9 @@
 package br.com.adrianorodrigues.algoritms.hackerrank;
 
-import jdk.nashorn.internal.runtime.logging.Logger;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
-import java.util.Scanner;
 
-@Logger
 public class SalesByMatch {
 
 

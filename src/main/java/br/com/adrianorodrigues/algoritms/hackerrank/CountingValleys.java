@@ -1,10 +1,10 @@
 package br.com.adrianorodrigues.algoritms.hackerrank;
 
-import jdk.nashorn.internal.runtime.logging.Logger;
+
 
 import java.io.FileNotFoundException;
 
-@Logger
+
 public class CountingValleys {
 
     public static final char UPHILL = 'U';
