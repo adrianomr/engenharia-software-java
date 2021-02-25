@@ -9,6 +9,7 @@ import br.com.adrianorodrigues.designpatterns.structural.bridge.BridgeExecutor;
 import br.com.adrianorodrigues.designpatterns.structural.decorator.DecoratorExecutor;
 import br.com.adrianorodrigues.designpatterns.structural.proxy.ProxyExecutor;
 import br.com.adrianorodrigues.executor.Executor;
+import br.com.adrianorodrigues.objects.EqualsAndHashCode;
 import br.com.adrianorodrigues.stringbuilder.StringBuilderExecutor;
 import br.com.adrianorodrigues.stringpool.StringPoolExecutor;
 
@@ -34,5 +35,7 @@ public class Main {
         Executor.execute(new StringBuilderExecutor());
         Logger.getGlobal().info("Collections");
         Executor.execute(new ListVsSet());
+        Logger.getGlobal().info("Objects");
+        Executor.execute(new EqualsAndHashCode());
     }
 }
